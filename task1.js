@@ -1,6 +1,6 @@
-function LocalStorageManager() {}
+function LocalStorageManager() { }
 
-LocalStorageManager.prototype.saveData = function(key, data) {
+LocalStorageManager.prototype.saveData = function (key, data) {
   try {
     localStorage.setItem(key, JSON.stringify(data));
     console.log(`Data with key '${key}' saved successfully.`);
@@ -9,7 +9,7 @@ LocalStorageManager.prototype.saveData = function(key, data) {
   }
 };
 
-LocalStorageManager.prototype.getData = function(key) {
+LocalStorageManager.prototype.getData = function (key) {
   try {
     const data = JSON.parse(localStorage.getItem(key));
     console.log(`Data with key '${key}' retrieved successfully:`, data);
